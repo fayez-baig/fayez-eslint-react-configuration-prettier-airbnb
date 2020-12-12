@@ -1,0 +1,54 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module",
+    "allowImportExportEverywhere": false,
+    "codeFrame": false
+  },
+  "extends": ["eslint:recommended", "prettier", "airbnb","prettier/react", "plugin:react/recommended"],
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "plugins": ["sort-imports-es6-autofix", "sort-keys-fix", "react"],
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
+    "quotes": ["error", "single", { "allowTemplateLiterals": true }],
+    "no-restricted-globals": ["off"],
+    "spaced-comment": ["error", "always", { "markers": ["/"] }],
+    "indent": ["warn", 2, { "ignoredNodes": ["TemplateLiteral"] }],
+    "max-len": ["error", { "code": 100 }],
+    "prefer-promise-reject-errors": ["off"],
+    "react/jsx-filename-extension": ["off"],
+    "react/prop-types": 1,
+    "no-return-assign": ["off"],
+    "func-style": ["error", "expression"],
+    "no-duplicate-imports": ["error", { "includeExports": true }],
+    "sort-keys-fix/sort-keys-fix": "warn",
+    "sort-keys": [
+      "error",
+      "asc",
+      {
+        "caseSensitive": true,
+        "natural": false,
+        "minKeys": 2
+      }
+    ],
+    "no-console": ["error", { "allow": ["warn"] }],
+    "react/jsx-uses-react": 1,
+    "react/jsx-no-undef": 1,
+    "react/react-in-jsx-scope": 0,
+    "react/no-unknown-property": 1,
+    "react/self-closing-comp": 1,
+    "no-underscore-dangle": 1,
+    "react/display-name": 1,
+    "no-mixed-requires": [1],
+    "react/sort-comp": 1
+  }
+}
